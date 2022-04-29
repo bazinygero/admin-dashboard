@@ -16,8 +16,8 @@ a {
 
 .acc-image-large {
     border-radius: 50%;
-    height: 100px;
-    width: 100px;
+    height: 75px;
+    width: 75px;
 }
 .acc-image-small {
     border-radius: 50%;
@@ -25,3 +25,239 @@ a {
     width: 50px;
 }
 
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+    'sidebar header'
+    'sidebar content';
+}
+
+.header {
+    grid-area: header;
+    padding: 1.5rem 3rem;
+  }
+  
+  .top {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    margin-bottom: 2rem;
+  }
+  
+  .search {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    width: 100%;
+  }
+  
+  .search > #search {
+    display: inline-block;
+    border: 0.5;
+    background-color: rgb(135, 135, 135);
+    padding: 0.5em 2em;
+    margin-left: 1.25rem;
+    border-radius: 99em;
+    width: min(80%, 700px);
+  }
+  
+  .header .account {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 800;
+  }
+  
+  .account button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .account .picture {
+    margin: 0 1rem 0 2.5rem;
+  }
+  
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .btn {
+    font-weight: 500;
+    padding: 0.75em 2.3em;
+    border-radius: 99em;
+  }
+
+  .sidebar {
+    padding: 1.5rem;
+    grid-area: sidebar;
+  }
+  
+  .sidebar-title {
+    display: flex;
+    align-items: center;
+    font-size: 1.75rem;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .nav {
+    font-size: 1.2rem;
+    margin-top: 3.25rem;
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .nav-item.current {
+    font-weight: 900;
+    }
+
+  .nav-item {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+  }
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .content {
+    grid-area: content;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: min-content 1fr;
+    gap: 2rem;
+    grid-template-areas:
+      'projects projects announcements'
+      'projects projects trending';
+    overflow: auto;
+  }
+  
+  .content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .card {
+    padding: 2rem;
+    border-radius: 0.5rem;
+  }
+  
+  .projects {
+    grid-area: projects;
+  }
+  
+  .projects .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .projects .card {
+    border-left: 10px solid;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .projects .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.25em;
+  }
+  
+  .actions {
+    margin-top: auto;
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .actions span {
+    font-size: 1.75rem;
+    cursor: pointer;
+  }
+  
+  .announcements {
+    grid-area: announcements;
+  }
+  
+  .announcement {
+    width: 25ch;
+    padding: 1rem 0;
+  }
+  
+  .announcement:first-child {
+    padding-top: 0;
+  }
+  
+  .announcement:last-child {
+    padding-bottom: 0;
+  }
+  
+  .announcement h5 {
+    font-size: 0.9rem;
+    margin-bottom: 0.25em;
+  }
+
+  .trending {
+    grid-area: trending;
+  }
+  
+  .trending .card {
+    padding: 1.5rem;
+  }
+  
+  .trend {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+  }
+  
+  .trend + .trend {
+    margin-top: 1.5rem;
+  }
+  
+  .trend .picture {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .trend .account {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+  
+  .trend .username {
+    font-weight: 500;
+    margin-bottom: 0.15rem;
+  }
