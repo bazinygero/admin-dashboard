@@ -12,6 +12,7 @@ ul {
 
 a {
     text-decoration: none;
+    color: #ede9fe;
 }
 
 .acc-image-large {
@@ -38,22 +39,23 @@ body {
 .header {
     grid-area: header;
     padding: 1.5rem 3rem;
-  }
-  
-  .top {
+    background-color: #e0f2fe;
+}
+
+.top {
     display: grid;
     grid-template-columns: 1fr max-content;
     margin-bottom: 2rem;
-  }
-  
-  .search {
+}
+
+.search {
     display: flex;
     align-items: center;
     margin-right: auto;
     width: 100%;
-  }
-  
-  .search > #search {
+}
+
+.search > #search {
     display: inline-block;
     border: 0.5;
     background-color: rgb(135, 135, 135);
@@ -61,88 +63,90 @@ body {
     margin-left: 1.25rem;
     border-radius: 99em;
     width: min(80%, 700px);
-  }
-  
-  .header .account {
+}
+
+.header .account {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     font-size: 1.2rem;
     font-weight: 800;
-  }
-  
-  .account button {
+}
+
+.account button {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .account .picture {
+}
+
+.account .picture {
     margin: 0 1rem 0 2.5rem;
-  }
-  
-  .bottom {
+}
+
+.bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .profile {
+}
+
+.profile {
     display: flex;
     align-items: center;
     gap: 1rem;
-  }
+}
 
-  .buttons {
+.buttons {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 2rem;
-  }
-  
-  .btn {
+}
+
+.btn {
     font-weight: 500;
     padding: 0.75em 2.3em;
     border-radius: 99em;
-  }
+}
 
-  .sidebar {
+.sidebar {
     padding: 1.5rem;
     grid-area: sidebar;
-  }
-  
-  .sidebar-title {
+    background-color: #7c3aed;
+}
+
+.sidebar-title {
     display: flex;
     align-items: center;
     font-size: 1.75rem;
     flex-direction: row;
     gap: 1rem;
-  }
+}
 
-  .nav {
+.nav {
     font-size: 1.2rem;
     margin-top: 3.25rem;
     display: grid;
     gap: 1.5rem;
-  }
-  
-  .nav-item.current {
-    font-weight: 900;
-    }
+}
 
-  .nav-item {
-      display: flex;
-      flex-direction: row;
-      gap: 1rem;
-  }
-  
-  .nav-link {
+.nav-item.current {
+    font-weight: 900;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.nav-link {
     display: flex;
     align-items: center;
     gap: 1em;
-  }
+}
 
-  .content {
+.content {
+    background-color: #c4b5fd;
     grid-area: content;
     padding: 3rem;
     display: grid;
@@ -150,114 +154,115 @@ body {
     grid-template-rows: min-content 1fr;
     gap: 2rem;
     grid-template-areas:
-      'projects projects announcements'
-      'projects projects trending';
+    'projects projects announcements'
+    'projects projects trending';
     overflow: auto;
-  }
-  
-  .content h3 {
+}
+
+.content h3 {
     font-size: 1.3rem;
     margin-bottom: 0.8rem;
-  }
-  
-  .card {
+}
+
+.card {
     padding: 2rem;
     border-radius: 0.5rem;
-  }
-  
-  .projects {
+    background-color: #e0f2fe;
+}
+
+.projects {
     grid-area: projects;
-  }
-  
-  .projects .cards {
+}
+
+.projects .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-auto-rows: 250px;
     gap: 2rem;
     padding-bottom: 2rem;
-  }
-  
-  .projects .card {
+}
+
+.projects .card {
     border-left: 10px solid;
     display: flex;
     flex-direction: column;
-  }
-  
-  .projects .card-title {
+}
+
+.projects .card-title {
     font-size: 1.2rem;
     margin-bottom: 0.25em;
-  }
-  
-  .actions {
+}
+
+.actions {
     margin-top: auto;
     align-self: flex-end;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 1.5rem;
-  }
-  
-  .actions span {
+}
+
+.actions span {
     font-size: 1.75rem;
     cursor: pointer;
-  }
-  
-  .announcements {
+}
+
+.announcements {
     grid-area: announcements;
-  }
-  
-  .announcement {
+}
+
+.announcement {
     width: 25ch;
     padding: 1rem 0;
-  }
-  
-  .announcement:first-child {
+}
+
+.announcement:first-child {
     padding-top: 0;
-  }
-  
-  .announcement:last-child {
+}
+
+.announcement:last-child {
     padding-bottom: 0;
-  }
-  
-  .announcement h5 {
+}
+
+.announcement h5 {
     font-size: 0.9rem;
     margin-bottom: 0.25em;
-  }
+}
 
-  .trending {
+.trending {
     grid-area: trending;
-  }
-  
-  .trending .card {
+}
+
+.trending .card {
     padding: 1.5rem;
-  }
-  
-  .trend {
+}
+
+.trend {
     display: flex;
     align-items: center;
     gap: 1rem;
     cursor: pointer;
-  }
-  
-  .trend + .trend {
+}
+
+.trend + .trend {
     margin-top: 1.5rem;
-  }
-  
-  .trend .picture {
+}
+
+.trend .picture {
     border-radius: 50%;
     width: 45px;
     height: 45px;
-  }
-  
-  .trend .account {
+}
+
+.trend .account {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     font-size: 0.9rem;
-  }
-  
-  .trend .username {
+}
+
+.trend .username {
     font-weight: 500;
     margin-bottom: 0.15rem;
-  }
+}
